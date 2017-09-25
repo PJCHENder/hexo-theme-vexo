@@ -14,11 +14,11 @@
     <p class="description"><%- theme.about.description %></p>
   <% } %>
   <section class="share-icons">
-    <% if (theme.about.weibo_username) { %>
-      <a class="icon-weibo" href="http://weibo.com/<%- theme.about.weibo_username %>" target="_blank">
+    <% if (theme.about.facebook_username) { %>
+      <a class="icon-facebook" href="http://www.facebook.com/<%- theme.about.facebook_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
@@ -48,9 +48,12 @@
     <% } %>
     <% if (theme.about.zhihu_username) { %>
       <a class="icon-zhihu" href="https://www.zhihu.com/people/<%- theme.about.zhihu_username %>" target="_blank">
+    <% } %>
+    <% if (theme.about.google_username) { %>
+      <a class="icon-google" href="https://plus.google.com/<%- theme.about.google_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-stack-1x fa-inverse">知</i>
+          <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>

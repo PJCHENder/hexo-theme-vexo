@@ -1,0 +1,39 @@
+<div id="article-banner">
+    <h2>Categories</h2>
+    <p class="post-date">類別檢索</p>
+  </div>
+  <main class="app-body">
+    <div id="tag-cloud">
+      <% site.categories.map(function(category, index) { %>
+        <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= category.name %>"><%= category.name %></a>
+      <% }) %>
+    </div>
+    <% site.categories.map(function(category, index){ %>
+      <div class="tag-list">
+        <h3 class="tag-name" id="tag-<%= category.name %>"><%= category.name %></h3>
+        <% category.posts.map(function(post) { %>
+          <ul class="tag-preview">
+            <li>
+              <a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a>
+            </li>
+          </ul>
+          <% }) %>
+      </div>
+      <% }) %>
+  </main>
+
+  <script>
+    (function () {
+      var url = '<%= config.url %>/<%= page.path %>'
+      $('#article-banner').geopattern(url)
+      $('.header').removeClass('fixed-header')
+
+      var tag = location.hash.replace('#', '')
+      if (tag) {
+        var tagId = "#tag-" + tag;
+        $("html, body").animate({
+          scrollTop: $(tagId).offset().top
+        }, 400)
+      }
+    })();
+  </script>
