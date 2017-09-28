@@ -1,9 +1,10 @@
-<div id="about-banner" style="background-image: url(<%- theme.about.banner %>)"></div>
+<div id="about-banner" style="background-image: url(<%- config.about.banner %>)"></div>
 <div class="author">
   <div class="head">
-    <img src="<%- theme.about.avatar %>" />
+    <img src="<%- config.about.avatar %>" />
   </div>
   <h3><%- config.author %></h3>
+
   <% if (typeof(theme.about.description) === 'object') { %>
     <% for (var i in theme.about.description) { %>
       <p class="description">
@@ -11,54 +12,58 @@
       </p>
     <% } %>
   <% } else { %>
-    <p class="description"><%- theme.about.description %></p>
+    <p class="description"><%- config.about.description %></p>
   <% } %>
+
   <section class="share-icons">
-    <% if (theme.about.facebook_username) { %>
-      <a class="icon-facebook" href="http://www.facebook.com/<%- theme.about.facebook_username %>" target="_blank">
+    <% if (config.about.facebook_username) { %>
+      <a class="icon-facebook" href="http://www.facebook.com/<%- config.about.facebook_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
-    <% if (theme.about.twitter_username) { %>
-      <a class="icon-twitter" href="https://twitter.com/<%- theme.about.twitter_username %>" target="_blank">
+    <% if (config.about.twitter_username) { %>
+      <a class="icon-twitter" href="https://twitter.com/<%- config.about.twitter_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
-    <% if (theme.about.github_username) { %>
-      <a class="icon-github" href="https://github.com/<%- theme.about.github_username %>" target="_blank">
+    <% if (config.about.github_username) { %>
+      <a class="icon-github" href="https://github.com/<%- config.about.github_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
-    <% if (theme.about.linkedin_username) { %>
-      <a class="icon-linkedin" href="https://www.linkedin.com/in/<%- theme.about.linkedin_username %>" target="_blank">
+    <% if (config.about.linkedin_username) { %>
+      <a class="icon-linkedin" href="https://www.linkedin.com/in/<%- config.about.linkedin_username %>" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
-    <% if (theme.about.zhihu_username) { %>
-      <a class="icon-zhihu" href="https://www.zhihu.com/people/<%- theme.about.zhihu_username %>" target="_blank">
+    <% if (config.about.zhihu_username) { %>
+      <a class="icon-zhihu" href="https://www.zhihu.com/people/<%- config.about.zhihu_username %>" target="_blank">
     <% } %>
-    <% if (theme.about.google_username) { %>
-      <a class="icon-google" href="https://plus.google.com/<%- theme.about.google_username %>" target="_blank">
+    <% if (config.about.google_username) { %>
+      <a class="icon-google" href="https://plus.google.com/<%- config.about.google_username %>" target="_blank">
+    <% } %>
+    <% if (config.about.blogger_username) { %>
+      <a class="icon-blogger" href="https://<%- config.about.blogger_username %>.blogspot.com" target="_blank">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-google fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     <% } %>
-    <% if (theme.about.douban_username) { %>
-        <a class="icon-douban" href="https://www.douban.com/people/<%- theme.about.douban_username %>" target="_blank">
+    <% if (config.about.douban_username) { %>
+        <a class="icon-douban" href="https://www.douban.com/people/<%- config.about.douban_username %>" target="_blank">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-stack-1x fa-inverse">豆</i>
