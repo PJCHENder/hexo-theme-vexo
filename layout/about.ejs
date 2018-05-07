@@ -1,14 +1,14 @@
-<div id="about-banner" style="background-image: url(<%- config.about.banner %>)"></div>
+<div id="about-banner"></div>
 <div class="author">
   <div class="head">
-    <img src="<%- config.about.avatar %>" />
+    <img src="/css/images/avatar.jpg" />
   </div>
   <h3><%- config.author %></h3>
 
-  <% if (typeof(theme.about.description) === 'object') { %>
-    <% for (var i in theme.about.description) { %>
+  <% if (typeof(config.about.description) === 'object') { %>
+    <% for (var i in config.about.description) { %>
       <p class="description">
-        <%- theme.about.description[i] %>
+        <%- config.about.description[i] %>
       </p>
     <% } %>
   <% } else { %>

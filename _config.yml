@@ -28,13 +28,13 @@ qrcode: false
 
 # comment
 # you can set gitment or uyan
-# comment: gitment
+comment: gitment
 
 # gitment config
-# gitment_owner: yanm1ng
-# gitment_repo: yanm1ng.github.io
-# gitment_oauth_id: 0f87e490e00ee3fd87ef
-# gitment_oauth_secret: 4a9d2b148e7971c2201ad12131ce8bf8159ccd2e
+gitment_owner: undefined
+gitment_repo: yanm1ng.github.io
+gitment_oauth_id: 0f87e490e00ee3fd87ef
+gitment_oauth_secret: 4a9d2b148e7971c2201ad12131ce8bf8159ccd2e
 
 # GA
 google_analytics: true
@@ -51,7 +51,6 @@ about:
   banner: http://file.muyutech.com/about.jpg
   avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
   description: "The end is always near."
-  facebook_username: yanm1ng
   weibo_username: yanm1ng
   twitter_username: yanm1ng
   github_username: yanm1ng
@@ -64,7 +63,4 @@ about:
 mathjax:
   enable: true
   per_page: false
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
-  banner: "http://file.muyutech.com/about.jpg"
-  avatar: https://i.imgur.com/PvIaoch.jpg
-  description: 唯有自己整理過的東西才是自己的
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
