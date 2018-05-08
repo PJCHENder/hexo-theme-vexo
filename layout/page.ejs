@@ -92,7 +92,8 @@
 
     // error image
     $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).attr('src', '/css/images/error-img.jpg')
+
       $(this).css({
         'cursor': 'default'
       })
@@ -101,7 +102,8 @@
     // zoom image
     $(".markdown-content img").on('click', function() {
       var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
+      if (src !== '/css/images/error-img.jpg') {
+
         var imageW = $(this).width()
         var imageH = $(this).height()
 
