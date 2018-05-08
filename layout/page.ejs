@@ -43,8 +43,11 @@
     <!-- 二维码 START -->
     <% if (theme.qrcode) { %>
       <div class="qrcode">
-        <canvas id="share-qrcode"></canvas>
-        <p class="notice">扫描二维码，分享此文章</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink">
+          <g id="share-qrcode" />
+        </svg>
+
+        <p class="notice">掃描二維條碼，分享此文章</p>
       </div>
     <% } %>
     <!-- 二维码 END -->
@@ -122,10 +125,20 @@
       }
     })
 
-    // qrcode
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
+    // DEPRECATED: qrcode
+    // var qr = new QRious({
+    //   element: document.getElementById('share-qrcode'),
+    //   value: document.location.href
+    // });
+
+    var qrcode = new QRCode(document.getElementById("share-qrcode"), {
+      text: document.location.href,
+      width: 100,
+      height: 100,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.L,
+      useSVG: true
     });
 
     // gitment
