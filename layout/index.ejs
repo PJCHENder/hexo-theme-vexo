@@ -15,7 +15,7 @@
           <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
         <% } %>
       </div>
-      <a class="more" href="<%- url_for(post.path) %>"><%- theme.excerpt_link %></a>
+      <a class="more" href="<%- url_for(post.path) %>"><%= __('common.read_more') %></a>
     </article>
   <% }) %>
 
@@ -23,4 +23,3 @@
     <%- partial('_partial/pager') %>
   <% } %>
 </main>
-

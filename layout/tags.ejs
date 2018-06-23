@@ -5,12 +5,12 @@
 <main class="app-body">
   <div id="tag-cloud">
     <% site.tags.map(function(tag, index) { %>
-      <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
+      <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name.replace(/\s/g,'-') %>"><%= tag.name %></a>
     <% }) %>
   </div>
   <% site.tags.map(function(tag, index){ %>
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-<%= tag.name %>"><%= tag.name %></h3>
+      <h3 class="tag-name" id="tag-<%= tag.name.replace(/\s/g,'-') %>"><%= tag.name %></h3>
       <% tag.posts.map(function(post) { %>
         <ul class="tag-preview">
           <li>

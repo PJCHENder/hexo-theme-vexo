@@ -53,6 +53,11 @@
     <% } %>
     <% if (config.about.google_username) { %>
       <a class="icon-google" href="https://plus.google.com/<%- config.about.google_username %>" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     <% } %>
     <% if (config.about.blogger_username) { %>
       <a class="icon-blogger" href="https://<%- config.about.blogger_username %>.blogspot.com" target="_blank">

@@ -1,0 +1,8 @@
+common:
+  none: None
+  untitled: Untitled
+  catalog: Catalog
+  read_more: read more
+pager:
+  prev: Prev
+  next: Next
