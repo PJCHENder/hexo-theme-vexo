@@ -17,6 +17,11 @@
       </div>
     <% } %>
     <!-- Tags END -->
+    <!-- UpdatedDate Start -->
+    <% if (page.updated) { %>
+      <p class="post-date">最後更新時間：<%- date(page.updated, "YYYY-MM-DD") %></p>
+    <% } %>
+    <!-- UpdatedDate END -->
     <!-- NAV START -->
     <%- partial('_partial/nav') %>
     <!-- NAV END -->
