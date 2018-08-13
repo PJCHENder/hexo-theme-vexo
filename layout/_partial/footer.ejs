@@ -23,6 +23,11 @@
 </script>
 
 <script>
+  $('figure').each(function(i, block) {
+    let lang = this.classList[1] || 'codeblock'
+    this.dataset.lang = lang.toUpperCase();
+  })
+/*
   var hasLine = '<%- config.highlight["line_number"] %>';
   async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
@@ -40,6 +45,7 @@
       hljs.highlightBlock(block);
     });
   })
+*/
 </script>
 <!-- Baidu Tongji -->
 <% if (config.ba_track_id) { %>
