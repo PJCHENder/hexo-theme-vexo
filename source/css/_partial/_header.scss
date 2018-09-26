@@ -6,13 +6,13 @@
   left: 0;
   width: 100%;
   z-index: 200;
-  transition: background .5s;
+  transition: background 0.5s;
 }
 
 .fixed-header {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 0 3px rgba(14, 14, 14, .26);
+  box-shadow: 0 0 3px rgba(14, 14, 14, 0.26);
 
   .home-link {
     color: $primary-color;
@@ -33,6 +33,9 @@
   margin: 0 auto;
   padding: 10px 40px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media #{$m-mobile} {
     padding: 6px 20px;
@@ -43,6 +46,7 @@
 .logo {
   background: url($logo-url);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -51,17 +55,22 @@
 .home-link {
   display: flex;
   align-items: center;
-  float: left;
   font-weight: 500;
   color: $white-color;
   font-size: 1.5em;
   line-height: 40px;
+
+  @media #{$m-mobile} {
+    span {
+      display: none;
+    }
+  }
 }
 
 .right-list {
   list-style: none;
-  float: right;
   padding: 0;
+  flex-grow: 1;
 
   @media #{$m-mobile} {
     display: none;
@@ -96,7 +105,6 @@
   float: right;
   width: 24px;
   height: 24px;
-  margin-top: 10px;
 
   .icon-bar {
     display: block;
@@ -121,9 +129,8 @@
   width: 100%;
   overflow: hidden;
   max-height: 0;
-  background: rgba(255,255,255,0.98);
-  -webkit-transition: max-height .2s ease;
-  transition: max-height .2s ease;
+  background: rgba(255, 255, 255, 0.98);
+  transition: max-height 0.2s ease;
 
   @media #{$m-mobile} {
     display: block;
@@ -132,7 +139,7 @@
 
 .open {
   max-height: 300px;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
 }
 
 .menu-list {
